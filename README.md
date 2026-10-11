@@ -12,7 +12,7 @@ $ hd add HerringtonDarkholme/left-pad
 ## Usage
 
 ```hd
-use deps.left_pad.leftpad
+use dep.left_pad.leftpad
 
 leftpad('foo', 5)
 // => "  foo"
