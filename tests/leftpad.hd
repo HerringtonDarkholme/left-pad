@@ -1,0 +1,13 @@
+use pkg.{leftpad}
+use std.testing.assert_equal
+
+# reference
+# https://www.npmjs.com/package/left-pad/v/1.1.0?activeTab=code
+# test.js
+it("left pad"):
+  assert_equal(leftpad("foo", 5), "  foo", reason="")
+  assert_equal(leftpad("foobar", 6), "foobar", reason="")
+  assert_equal(leftpad("1", 2, '0'), "01", reason="")
+  assert_equal(leftpad("1", 2, '-'), "-1", reason="")
+  assert_equal(leftpad("foo", 2, ' '), "foo", reason="")
+  assert_equal(leftpad("foo", 7, '1'), "1111foo", reason="")

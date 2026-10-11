@@ -1,0 +1,11 @@
+## reproduce the legendary leftpad package
+## no perf optimization is done on purpose
+## reference: https://en.wikipedia.org/wiki/Npm_left-pad_incident#Background
+pub fn leftpad(str: string, len: usize, ch: char = ' ') -> string:
+  if len <= str.len():
+    return str
+  limit := len - str.len()
+  let ret = str
+  for _ in 0..limit:
+    ret = ch.to_string() + ret
+  ret
